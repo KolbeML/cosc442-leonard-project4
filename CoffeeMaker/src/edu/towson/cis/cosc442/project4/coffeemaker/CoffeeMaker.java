@@ -5,13 +5,13 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
  */
 public class CoffeeMaker {
 	/** Array of recipes in coffee maker */
-	private Recipe [] recipeArray;
+	private final Recipe [] recipeArray;
 	/** Number of recipes in coffee maker */
 	private final int NUM_RECIPES = 4;
 	/** Array describing if the array is full */
-	private boolean [] recipeFull;
+	private final boolean [] recipeFull;
 	/** Inventory of the coffee maker */
-    private Inventory inventory;
+    private final Inventory inventory;
 	
     /**
      * Constructor for the coffee maker
@@ -43,7 +43,7 @@ public class CoffeeMaker {
         
         //Check for an empty recipe, add recipe to first empty spot
         if(canAddRecipe) {
-        	int emptySpot = -1;
+        	final int emptySpot = -1;
         	canAddRecipe = checkEmpty(r, canAddRecipe, emptySpot);
         }
         return canAddRecipe;
