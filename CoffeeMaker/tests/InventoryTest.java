@@ -74,6 +74,27 @@ public class InventoryTest {
 	}
 	
 	/**
+	 * Run the boolean enoughIngredients(Recipe) method test, just enough coffee.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/24/18, 6:04 PM
+	 */
+	@Test
+	public void testEnoughIngredients_2a()
+		throws Exception {
+		Inventory fixture = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtCoffee(49);
+		fixture.setCoffee(49);
+
+		boolean result = fixture.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(true, result);
+	}
+	
+	/**
 	 * Run the boolean enoughIngredients(Recipe) method test, not enough milk.
 	 *
 	 * @throws Exception
@@ -91,6 +112,26 @@ public class InventoryTest {
 
 		// add additional test code here
 		assertEquals(false, result);
+	}
+	
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test, just enough milk.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/24/18, 6:04 PM
+	 */
+	@Test
+	public void testEnoughIngredients_3a()
+		throws Exception {
+		Inventory fixture = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtMilk(49);
+		fixture.setMilk(49);
+		boolean result = fixture.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(true, result);
 	}
 	
 	/**
@@ -113,6 +154,26 @@ public class InventoryTest {
 		// add additional test code here
 		assertEquals(false, result);
 	}
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test, 
+	 * just enough chocolate.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/24/18, 6:04 PM
+	 */
+	@Test
+	public void testEnoughIngredients_4a()
+		throws Exception {
+		Inventory fixture = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtChocolate(49);
+		fixture.setChocolate(49);
+		boolean result = fixture.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(true, result);
+	}
 	
 	/**
 	 * Run the boolean enoughIngredients(Recipe) method test, not enough sugar.
@@ -132,6 +193,26 @@ public class InventoryTest {
 
 		// add additional test code here
 		assertEquals(false, result);
+	}
+	
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test, just enough sugar.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/24/18, 6:04 PM
+	 */
+	@Test
+	public void testEnoughIngredients_5a()
+		throws Exception {
+		Inventory fixture = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtSugar(49);
+		fixture.setSugar(49);
+		boolean result = fixture.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(true, result);
 	}
 
 	/**
@@ -220,7 +301,7 @@ public class InventoryTest {
 		int chocolate = -1;
 
 		fixture.setChocolate(chocolate);
-
+		assertEquals(0, fixture.getChocolate());
 		// add additional test code here
 	}
 
@@ -238,7 +319,7 @@ public class InventoryTest {
 		int chocolate = 1;
 
 		fixture.setChocolate(chocolate);
-
+		assertEquals(chocolate, fixture.getChocolate());
 		// add additional test code here
 	}
 
@@ -256,7 +337,7 @@ public class InventoryTest {
 		int coffee = -1;
 
 		fixture.setCoffee(coffee);
-
+		assertEquals(0, fixture.getCoffee());
 		// add additional test code here
 	}
 
@@ -274,7 +355,7 @@ public class InventoryTest {
 		int coffee = 1;
 
 		fixture.setCoffee(coffee);
-
+		assertEquals(coffee, fixture.getCoffee());
 		// add additional test code here
 	}
 
@@ -292,7 +373,7 @@ public class InventoryTest {
 		int milk = -1;
 
 		fixture.setMilk(milk);
-
+		assertEquals(0, fixture.getMilk());
 		// add additional test code here
 	}
 
@@ -310,7 +391,7 @@ public class InventoryTest {
 		int milk = 1;
 
 		fixture.setMilk(milk);
-
+		assertEquals(milk, fixture.getMilk());
 		// add additional test code here
 	}
 
@@ -328,7 +409,7 @@ public class InventoryTest {
 		int sugar = -1;
 
 		fixture.setSugar(sugar);
-
+		assertEquals(0, fixture.getSugar());
 		// add additional test code here
 	}
 

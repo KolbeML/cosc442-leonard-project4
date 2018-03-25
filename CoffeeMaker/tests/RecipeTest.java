@@ -211,9 +211,8 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = RecipeFactory.createRecipe();
 		int amtChocolate = -1;
-
 		fixture.setAmtChocolate(amtChocolate);
-
+		assertEquals(0, fixture.getAmtChocolate());
 		// add additional test code here
 	}
 
@@ -229,8 +228,8 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = RecipeFactory.createRecipe();
 		int amtChocolate = 1;
-
 		fixture.setAmtChocolate(amtChocolate);
+		assertEquals(amtChocolate, fixture.getAmtChocolate());
 
 		// add additional test code here
 	}
@@ -247,8 +246,8 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = RecipeFactory.createRecipe();
 		int amtCoffee = -1;
-
 		fixture.setAmtCoffee(amtCoffee);
+		assertEquals(0, fixture.getAmtCoffee());
 
 		// add additional test code here
 	}
@@ -268,6 +267,7 @@ public class RecipeTest {
 
 		fixture.setAmtCoffee(amtCoffee);
 
+		assertEquals(amtCoffee, fixture.getAmtCoffee());
 		// add additional test code here
 	}
 
@@ -286,6 +286,7 @@ public class RecipeTest {
 
 		fixture.setAmtMilk(amtMilk);
 
+		assertEquals(0, fixture.getAmtMilk());
 		// add additional test code here
 	}
 
@@ -303,7 +304,7 @@ public class RecipeTest {
 		int amtMilk = 1;
 
 		fixture.setAmtMilk(amtMilk);
-
+		assertEquals(amtMilk, fixture.getAmtMilk());
 		// add additional test code here
 	}
 
@@ -321,7 +322,7 @@ public class RecipeTest {
 		int amtSugar = -1;
 
 		fixture.setAmtSugar(amtSugar);
-
+		assertEquals(0, fixture.getAmtSugar());
 		// add additional test code here
 	}
 
@@ -339,7 +340,7 @@ public class RecipeTest {
 		int amtSugar = 1;
 
 		fixture.setAmtSugar(amtSugar);
-
+		assertEquals(amtSugar, fixture.getAmtSugar());
 		// add additional test code here
 	}
 
@@ -375,7 +376,7 @@ public class RecipeTest {
 		int price = -1;
 
 		fixture.setPrice(price);
-
+		assertEquals(0, fixture.getPrice());
 		// add additional test code here
 	}
 
@@ -393,7 +394,7 @@ public class RecipeTest {
 		int price = 1;
 
 		fixture.setPrice(price);
-
+		assertEquals(price, fixture.getPrice());
 		// add additional test code here
 	}
 
